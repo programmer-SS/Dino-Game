@@ -7,8 +7,8 @@ const imageNames = ['bird','cactus','dino'];
 const game = {
   counter: 0,
   backGrounds: [],
-  bgm1: new Audio('bgm/fieldSong.mp3'),
-  bgm2: new Audio('bgm/jump.mp3'),
+  bgm1: new Audio('file:///Users/tearl/workspace/dinoGame/bgm/fieldSong.mp3'),
+  bgm2: new Audio('file:///Users/tearl/workspace/dinoGame/bgm/jump.mp3'),
   enemys: [],
   enemyCountdown: 0,
   image: {},
@@ -21,7 +21,7 @@ game.bgm1.loop = true;
 // 複数の画像を読み込む
 let imageLoadCounter = 0;
 for (const imageName of imageNames) {
-   const imagePath = `image/${imageName}.png`;
+   const imagePath = `file:///Users/tearl/workspace/dinoGame/image/${imageName}.png`;
    game.image[imageName] = new Image();
    game.image[imageName].src = imagePath;
    game.image[imageName].onload = () => {
